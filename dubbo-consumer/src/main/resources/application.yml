@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: dubbo-consumer
+
+server:
+  port: 8090
+
+dubbo:
+  application:
+    id: dubbo-consumer
+    name: dubbo-consumer
+  registry:
+    id: my-registry
+    address: zookeeper://10.109.246.70:2181
+
+endpoints:
+  dubbo:
+    enabled: true

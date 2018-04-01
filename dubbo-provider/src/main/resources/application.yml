@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dubbo-provider
+
+server:
+  port: 8080
+
+dubbo:
+  scan:
+    base-packages: lab.zlren.dubbo.provider.service
+  application:
+    id: dubbo-provider
+    name: dubbo-provider
+    qos-port: 22222
+    qos-enable: true
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+    status: server
+  registry:
+    id: my-registry
+    address: zookeeper://10.109.246.70:2181
+
+endpoints.dubbo.enabled: true
